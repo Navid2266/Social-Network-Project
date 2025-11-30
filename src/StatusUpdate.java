@@ -41,7 +41,7 @@ public class StatusUpdate implements Comparable<StatusUpdate>{
     }
 
     @Override
-    public int compareTo(StatusUpdate o) {
-        return this.getTimestamp() - o.getTimestamp();
+    public int compareTo(StatusUpdate other) {
+        return this.getTimestamp() - other.getTimestamp();
     }
 }

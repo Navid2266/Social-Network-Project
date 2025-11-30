@@ -1,4 +1,4 @@
-public class UserProfile {
+public class UserProfile implements Comparable<UserProfile> {
 
     private String username;
     private Integer age;
@@ -26,10 +26,20 @@ public class UserProfile {
         return posts;
     }
 
-
     public void postStatus (String content, int privacy, int ageLimit, int timestamp){
         StatusUpdate status = new StatusUpdate(content, this.username, privacy, ageLimit, timestamp);
         posts.addSorted(status);
     }
 
+    public void printWall (){
+        for (int i = 0; i<posts.size(); i++){
+            System.out.println(posts.get(i));
+        }
+    }
+
+    @Override
+    public String toString()
+    {
+        return "User Profile:" + username + ", age:" + age;
+    }
 }

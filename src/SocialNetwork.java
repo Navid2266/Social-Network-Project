@@ -1,12 +1,17 @@
 public class SocialNetwork implements iSocialNetwork {
 
+    private Vector<UserProfile> users;
+    private Vector<CorporateProfile> company;
+
     public void createUserProfile(String username, int age){
 
+        UserProfile userProfile = new UserProfile(username, age);
     }
 
 
     public void createCorporateProfile(String companyName){
 
+        CorporateProfile corporateProfile = new CorporateProfile(companyName);
     }
 
 
@@ -54,9 +59,13 @@ public class SocialNetwork implements iSocialNetwork {
     }
 
 
-    public void postStatus(String username, String status, int privacy, int ageLimit, int timestamp);
+    public void postStatus(String username, String status, int privacy, int ageLimit, int timestamp){
+
+    };
 
 
-    public void postAd(String companyName, String ad, int ageLimit, boolean paid, int timestamp);
+    public void postAd(String companyName, String ad, int ageLimit, boolean paid, int timestamp){
+
+    };
 
     }
