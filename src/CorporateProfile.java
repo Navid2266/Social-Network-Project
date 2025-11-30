@@ -17,7 +17,7 @@ public class CorporateProfile {
 
     public void postAd (String content, int ageLimit, boolean paid, int timestamp){
         Ad ad = new Ad(content, this.companyName, ageLimit, paid, timestamp);
-        ads.addSorted(ad);
+        ads.addLast(ad);
     }
 
     public void printWall (){

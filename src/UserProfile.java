@@ -1,4 +1,4 @@
-public class UserProfile implements Comparable<UserProfile> {
+public class UserProfile {
 
     private String username;
     private Integer age;
@@ -28,7 +28,7 @@ public class UserProfile implements Comparable<UserProfile> {
 
     public void postStatus (String content, int privacy, int ageLimit, int timestamp){
         StatusUpdate status = new StatusUpdate(content, this.username, privacy, ageLimit, timestamp);
-        posts.addSorted(status);
+        posts.addLast(status);
     }
 
     public void printWall (){

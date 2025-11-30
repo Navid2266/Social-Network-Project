@@ -1,4 +1,4 @@
-public class Vector<T extends Comparable<T>> {
+public class Vector<T> {
 
     private T[] data;
     private int count;
@@ -32,7 +32,6 @@ public class Vector<T extends Comparable<T>> {
         return false;
     }
 
-    /*
     public void addFirst(T item) {
         for (int i = count; i > 0; i--) {
             data[i] = data[i - 1];
@@ -44,8 +43,6 @@ public class Vector<T extends Comparable<T>> {
     public void addLast(T item) {
         data[count++] = item;
     }
-
-     */
 
     public T getFirst() {
         return data[0];
@@ -85,6 +82,7 @@ public class Vector<T extends Comparable<T>> {
         return ans;
     }
 
+    /*
     public void addSorted(T item) {
         if (count == 0){
             count++;
@@ -101,4 +99,5 @@ public class Vector<T extends Comparable<T>> {
         data[i+1] = item;
         count++;
     }
+     */
 }
