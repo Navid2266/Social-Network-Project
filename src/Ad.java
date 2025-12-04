@@ -1,4 +1,4 @@
-public class Ad {
+public class Ad implements Comparable<Ad>{
 
     private String content;
     private String author;
@@ -34,12 +34,11 @@ public class Ad {
         return timestamp;
     }
 
-/*
     @Override
     public int compareTo(Ad o) {
         return this.timestamp -  o.timestamp;
     }
-*/
+
     @Override
     public String toString() {
         return "Ad: " + timestamp + ", " + author + ", "

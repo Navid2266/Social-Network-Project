@@ -2,11 +2,11 @@ public class UserProfile {
 
     private String username;
     private Integer age;
-    private Vector<StatusUpdate> posts;
+    private ComparableVector<StatusUpdate> posts;
 
     public UserProfile (String username, int age)
     {
-        this.posts = new Vector<>(100);
+        this.posts = new ComparableVector<>(100);
         this.username = username;
         this.age = age;
     }
@@ -21,7 +21,7 @@ public class UserProfile {
         return age;
     }
 
-    public Vector<StatusUpdate> getPosts()
+    public ComparableVector<StatusUpdate> getPosts()
     {
         return posts;
     }

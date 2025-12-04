@@ -90,10 +90,6 @@ public class SocialNetwork implements iSocialNetwork {
         sortAd(corp.getAds());
     }
 
-    //at printWallOf class, we're going to have the user so we can get all posts of a defined user,
-    // but not the company name so we have to first create a vector
-    //which stores all ads of all companies then use them sorted in printWallOf
-
     private Vector<Ad> getAllAds() {
         Vector<Ad> allAds = new Vector<>(1000);
 

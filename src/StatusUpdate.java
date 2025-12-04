@@ -1,4 +1,4 @@
-public class StatusUpdate{
+public class StatusUpdate implements Comparable<StatusUpdate> {
 
     private String content;
     private String author;
@@ -39,11 +39,10 @@ public class StatusUpdate{
         return "Status update: " + timestamp + ", " + author + ", "
                 + privacy + ", " + ageLimit + ", " + content;
     }
-/*
+
     @Override
     public int compareTo(StatusUpdate other) {
         return this.getTimestamp() - other.getTimestamp();
     }
-*/
 }
 

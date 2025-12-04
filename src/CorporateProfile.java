@@ -1,7 +1,7 @@
 public class CorporateProfile {
 
     private String companyName;
-    private Vector<Ad> ads;
+    private ComparableVector<Ad> ads;
 
     public CorporateProfile(String companyName){
         this.companyName = companyName;
@@ -11,7 +11,7 @@ public class CorporateProfile {
         return companyName;
     }
 
-    public Vector<Ad> getAds() {
+    public ComparableVector<Ad> getAds() {
         return ads;
     }
 
