@@ -21,22 +21,6 @@ public class ComparableVector<T extends Comparable<T>> {
         return data[index];
     }
 
-    public void set(int index, T value) {
-        data[index] = value;
-    }
-
-    public void addLast(T item) {
-        data[count++] = item;
-    }
-
-    public void addFirst(T item) {
-        for (int i = count; i > 0; i--) {
-            data[i] = data[i - 1];
-        }
-        data[0] = item;
-        count++;
-    }
-
     public T getFirst() {
         return data[0];
     }

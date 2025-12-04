@@ -18,6 +18,7 @@ public class Vector<T> {
     }
 
     public T get(int index) {
+        if (index < 0 || index >= count) return null;
         return data[index];
     }
 

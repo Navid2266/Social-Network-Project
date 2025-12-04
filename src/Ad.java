@@ -10,7 +10,7 @@ public class Ad implements Comparable<Ad>{
         this.content = content;
         this.author = author;
         this.ageLimit = ageLimit;
-        this.paid = false;
+        this.paid = paid;
         this.timestamp = timestamp;
     }
 
@@ -34,6 +34,7 @@ public class Ad implements Comparable<Ad>{
         return timestamp;
     }
 
+    //using compareTo method to sort ads by their timestamp
     @Override
     public int compareTo(Ad o) {
         return this.timestamp -  o.timestamp;
@@ -42,6 +43,6 @@ public class Ad implements Comparable<Ad>{
     @Override
     public String toString() {
         return "Ad: " + timestamp + ", " + author + ", "
-                + ageLimit + ", " + ", " + content;
+                + ageLimit + ", " + paid + ", " + content;
     }
 }

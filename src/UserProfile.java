@@ -1,7 +1,7 @@
 public class UserProfile {
 
     private String username;
-    private Integer age;
+    private int age;
     private ComparableVector<StatusUpdate> posts;
 
     public UserProfile (String username, int age)
@@ -26,9 +26,10 @@ public class UserProfile {
         return posts;
     }
 
+    // Add sorted posts
     public void postStatus (String content, int privacy, int ageLimit, int timestamp){
         StatusUpdate status = new StatusUpdate(content, this.username, privacy, ageLimit, timestamp);
-        posts.addLast(status);
+        posts.addSorted(status);
     }
 
     public void printWall (){
@@ -40,6 +41,6 @@ public class UserProfile {
     @Override
     public String toString()
     {
-        return "User Profile:" + username + ", age:" + age;
+        return "User Profile: " + username + ", age:" + age;
     }
 }

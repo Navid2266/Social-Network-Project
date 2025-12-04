@@ -5,6 +5,7 @@ public class CorporateProfile {
 
     public CorporateProfile(String companyName){
         this.companyName = companyName;
+        this.ads = new ComparableVector<>(100);
     }
 
     public String getCompanyName() {
@@ -15,15 +16,20 @@ public class CorporateProfile {
         return ads;
     }
 
+    // Add sorted ads
     public void postAd (String content, int ageLimit, boolean paid, int timestamp){
         Ad ad = new Ad(content, this.companyName, ageLimit, paid, timestamp);
-        ads.addLast(ad);
+        ads.addSorted(ad);
     }
 
     public void printWall (){
         for (int i = 0; i < ads.size(); i++){
-            //automatically prints via Ad.toString()
             System.out.println(ads.get(i));
         }
+    }
+
+    @Override
+    public String toString() {
+        return "Corporate Profile: " + companyName;
     }
 }

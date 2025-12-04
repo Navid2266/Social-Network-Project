@@ -2,9 +2,9 @@ public class StatusUpdate implements Comparable<StatusUpdate> {
 
     private String content;
     private String author;
-    private Integer privacy;
-    private Integer ageLimit;
-    private Integer timestamp;
+    private int privacy;
+    private int ageLimit;
+    private int timestamp;
 
     public StatusUpdate(String content, String author, Integer privacy, Integer ageLimit, Integer timestamp) {
         this.content = content;
@@ -40,6 +40,7 @@ public class StatusUpdate implements Comparable<StatusUpdate> {
                 + privacy + ", " + ageLimit + ", " + content;
     }
 
+    // using compareTo to sort posts by their timestamp
     @Override
     public int compareTo(StatusUpdate other) {
         return this.getTimestamp() - other.getTimestamp();
