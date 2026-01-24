@@ -1,18 +1,18 @@
 public class CorporateProfile {
 
     private String companyName;
-    private ComparableVector<Ad> ads;
+    private SortedVector<Ad> ads;
 
     public CorporateProfile(String companyName){
         this.companyName = companyName;
-        this.ads = new ComparableVector<>(100);
+        this.ads = new SortedVector<>(100);
     }
 
     public String getCompanyName() {
         return companyName;
     }
 
-    public ComparableVector<Ad> getAds() {
+    public SortedVector<Ad> getAds() {
         return ads;
     }
 

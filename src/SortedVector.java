@@ -1,10 +1,10 @@
-public class ComparableVector<T extends Comparable<T>> {
+public class SortedVector<T extends Comparable<T>> {
 
     private T[] data;
     private int count;
 
     @SuppressWarnings("unchecked")
-    public ComparableVector(int capacity) {
+    public SortedVector(int capacity) {
         data = (T[]) new Comparable[capacity];
         count = 0;
     }
@@ -41,7 +41,7 @@ public class ComparableVector<T extends Comparable<T>> {
         count--;
     }
 
-    // SORTING feature for ads and posts
+    // SORTING feature for ads and posts using their defined compareTo method
     public void addSorted(T item) {
         if (count == 0) {
             data[count++] = item;
@@ -51,6 +51,7 @@ public class ComparableVector<T extends Comparable<T>> {
         int i = count - 1;
 
         // shift elements to the right until the correct spot is found
+        // this is O(n)
         while (i >= 0 && data[i].compareTo(item) > 0) {
             data[i + 1] = data[i];
             i--;

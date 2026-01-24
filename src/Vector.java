@@ -65,12 +65,17 @@ public class Vector<T> {
         count--;
     }
 
-    public void reverse() {
-        for (int i = 0; i < count / 2; i++) {
-            T temp = data[i];
-            data[i] = data[count - 1 - i];
-            data[count - 1 - i] = temp;
+    //this is used for getting the index of the current node when using graph
+    public int indexOf(T value)
+    {
+        for (int i = 0; i < count; i++)
+        {
+            if (data[i].equals(value))
+            {
+                return i;
+            }
         }
+        return -1; // not found
     }
 
     @Override
@@ -82,23 +87,4 @@ public class Vector<T> {
         ans += "]";
         return ans;
     }
-
-    /*
-    public void addSorted(T item) {
-        if (count == 0){
-            count++;
-            data[0] = item;
-            return;
-        }
-
-        int i = count - 1;
-        while (i >= 0 && data[i].compareTo(item) > 0) {
-            data[i+1] = data[i];
-            i--;
-        }
-
-        data[i+1] = item;
-        count++;
-    }
-     */
 }

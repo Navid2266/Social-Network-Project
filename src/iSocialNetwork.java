@@ -59,4 +59,82 @@ public interface iSocialNetwork {
      *
      */
     public void postAd(String companyName, String ad, int ageLimit, boolean paid, int timestamp);
+
+    /**************************** PART 2 ****************************/
+    /*
+     * Connect two user.
+     *
+     * @param username1
+     * @param username2
+     *
+     */
+    public void connect(String username1, String username2);
+    /*
+     * Print all friends of the user.
+     *
+     * @param username
+     *
+     */
+    public void printFriendListOf(String username);
+    /*
+    * Print contents of the wall of a friend.
+    * Note: make sure people are connected before printing the wall of the
+    friend
+    *
+    * @param username
+    * @param friendUsername
+    *
+    */
+    public void printWallOfAFriend(String username, String friendUsername);
+    /*
+     * Connect user with a company, i.e. user follows this company's content.
+     *
+     * @param username
+     * @param corporateName
+     *
+     */
+    public void follow(String username, String corporateName);
+    /*
+    * Return distance between two users, i.e. the number of steps required
+    to go from one user to another.
+    *
+    * @param username1
+    * @param username2
+    *
+    * @return distance
+    *
+    */
+    public int distance(String username1, String username2);
+    /*
+    * Print path between two users, i.e. usernames of users on the path
+    between them.
+    *
+    * @param username1
+    * @param username2
+    *
+    */
+    public void printPath(String username1, String username2);
+    /*
+    * Return distance between two users, i.e. the number of steps required
+    to go from one user to another,
+    * BUT excluding corporate profiles from the path.
+    *
+    * @param username1
+    * @param username2
+    *
+    * @return distance
+    *
+    */
+    public int distanceExcludeCorporate(String username1, String username2);
+    /*
+    * Print path between two users, i.e. usernames of users on the path
+    between them,
+    * BUT excluding corporate profiles from the path.
+    *
+    * @param username1
+    * @param username2
+    *
+    */
+    public void printPathExcludeCorporate(String username1, String
+            username2);
 }
